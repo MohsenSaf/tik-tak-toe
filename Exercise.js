@@ -62,5 +62,6 @@ function division(){
     return divResult
 }
 
+
 console.log('----------------------------------------------')
 // E 10
