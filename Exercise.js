@@ -64,4 +64,47 @@ function division(){
 
 
 console.log('----------------------------------------------')
-// E 10
+// E 22
+
+const A = new Set([1,9,7,12,28,5,6])
+
+const B = new Set([5,4,9,7,8,2,])
+
+function Union (A, B) {
+
+    const C = new Set()
+
+    for(let i of A) {C.add(i)}
+    for(let i of B) {C.add(i)}
+    console.log(`The Union of A and B is : (${[...C]})`)
+}
+Union(A,B)
+
+function Intersections (A, B) {
+    
+    const C = new Set()
+
+    for(let i of A) {
+        for(let j of B) {
+            if(i === j){
+                C.add(i)
+            }
+        }
+    }
+    console.log(`The Intersections of A and B is : (${[...C]})`)
+}
+Intersections(A, B)
+
+function Difference (A, B) {
+
+    for(let i of A) {
+        for(let j of B) {
+            if(i === j){
+                A.delete(i)
+            }
+        }
+    }
+    console.log(`The Difference of A and B is : (${[...A]})`)
+    
+}
+Difference(A, B)
